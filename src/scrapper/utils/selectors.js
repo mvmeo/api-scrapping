@@ -1,4 +1,4 @@
-export const SELECTORS = {
+const SELECTORS = {
   oxford: {
     producto: '.product-item-info',
     nombre: '.product-item-link',
@@ -69,3 +69,5 @@ export const SELECTORS = {
     imagen: { selector: '.main-product-list-image', atributo: 'data-src' }
   }
 }
+
+export default SELECTORS

@@ -1,4 +1,4 @@
-export const dataTiendas = {
+const dataTiendas = {
   oxford: {
     nombre: 'Oxford Store',
     logo: 'https://www.oxfordstore.cl/media/logo/stores/1/logo_oxford.png',
@@ -157,16 +157,11 @@ export const dataTiendas = {
         'https://crossmountain.cl/c/10/accesorios-ciclismo',
         'https://crossmountain.cl/c/6/luces'
       ],
-      indumentaria: {
-        hombre: ['https://crossmountain.cl/c/12/indumentaria-ciclismo?c=68,67'],
-        mujer: [
-          'https://crossmountain.cl/c/12/indumentaria-ciclismo?c=188,186'
-        ],
-        unisex: [
-          'https://crossmountain.cl/c/12/indumentaria-ciclismo?c=185,214,69,136,143,135'
-        ],
-        cascos: ['https://crossmountain.cl/c/9/cascos-ciclismo']
-      },
+      indumentaria: ['https://crossmountain.cl/c/12/indumentaria-ciclismo?c=68,67',
+        'https://crossmountain.cl/c/12/indumentaria-ciclismo?c=188,186',
+        'https://crossmountain.cl/c/12/indumentaria-ciclismo?c=185,214,69,136,143,135',
+        'https://crossmountain.cl/c/9/cascos-ciclismo'
+      ],
       mantenimiento: [
         'https://crossmountain.cl/c/20/mantenimiento-y-lubricacion'
       ]
@@ -232,10 +227,10 @@ export const dataTiendas = {
         'https://www.decathlon.cl/4786-Ciclismo-Bicicletas?page=2'
       ],
       accesorios: [
-        'https://www.decathlon.cl/4755-Ciclismo-accesorios-bicicletas?page=1',
-        'https://www.decathlon.cl/4755-Ciclismo-accesorios-bicicletas?page=2',
-        'https://www.decathlon.cl/4755-Ciclismo-accesorios-bicicletas?page=3',
-        'https://www.decathlon.cl/4755-Ciclismo-accesorios-bicicletas?page=4'
+        'https://www.decathlon.cl/4538-accesorios-para-bicicletas?page=1',
+        'https://www.decathlon.cl/4538-accesorios-para-bicicletas?page=2',
+        'https://www.decathlon.cl/4538-accesorios-para-bicicletas?page=3',
+        'https://www.decathlon.cl/4538-accesorios-para-bicicletas?page=4'
       ],
       indumentaria: [
         'https://www.decathlon.cl/4761-Ciclismo-ropa-ciclismo?page=1',
@@ -371,3 +366,5 @@ export const dataTiendas = {
     }
   }
 }
+
+export default dataTiendas
