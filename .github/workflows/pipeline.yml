@@ -1,0 +1,26 @@
+name: Scrape websites
+
+on:
+  workflow_dispatch:
+
+  repository_dispatch:
+    types:
+      - webhook
+
+  schedule:
+    - cron: '0 0 * * 5'
+    - cron: '0 0 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: |
+          npm run scrape
+          git config user.name ciclismo-bot
+          git diff --quiet && git diff --staged --quiet || git commit -am "[bot]: upload new data"
+          git push origin main
