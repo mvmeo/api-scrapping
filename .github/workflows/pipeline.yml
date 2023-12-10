@@ -19,6 +19,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: 'Create .env'
+        run: |
+          touch .env
+          echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
+          echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+          echo "DB_PORT=${{ secrets.DB_PORT }}" >> .env
+          echo "DB_USER=${{ secrets.DB_USER }}" >> .env
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+          cat .env
       - run: |
           npm i
           node src/index.js
